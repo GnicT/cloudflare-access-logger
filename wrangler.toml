@@ -1,0 +1,25 @@
+name = "cloudflare-access-logger"
+account_id = [ACCOUNT_ID]
+main = "src/index.ts"
+compatibility_date = "2025-07-21"
+routes = [
+  { pattern = "example.com/*", zone_name = "example.com" },
+  { pattern = "*.example.com/*", zone_name = "example.com" }
+]
+
+[[r2_buckets]]
+binding = "LOG_BUCKET"
+bucket_name = [BUCKET_NAME]
+preview_bucket_name = [BUCKET_NAME]
+
+[observability]
+enabled = true
+head_sampling_rate = 1 # optional. default = 1.
+
+[[durable_objects.bindings]]
+name = "LOG_BUFFER"
+class_name = "LogBuffer"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["LogBuffer"]
