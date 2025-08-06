@@ -28,15 +28,11 @@ A TypeScript Cloudflare Worker that logs incoming HTTP requests to R2, using Dur
 
 ## 📁 Project Structure
 
-```
-
 cloudflare-access-logger/
 ├── src/
 │   ├── index.ts         # Main Worker logic
 │   └── log-buffer.ts    # Durable Object class (log buffer + flush logic)
 └── wrangler.toml        # Worker + DO + R2 configuration
-
-````
 
 ---
 
@@ -53,19 +49,20 @@ cloudflare-access-logger/
 
 ## 🚀 Deployment (via Wrangler)
 
-1. Install dependencies (if needed):
+1. Create your R2 bucket in the Cloudflare dashboard
+
+2. Install dependencies (if needed):
    ```bash
    npm install
-````
+   ```
 
-2. Update `wrangler.toml`
+3. Update `wrangler.toml`
 
-3. Deploy with Wrangler:
+4. Deploy with Wrangler:
 
    ```bash
    npx wrangler publish
    ```
-
 
 ---
 
