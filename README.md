@@ -1,4 +1,3 @@
-```markdown
 # 🌐 Cloudflare Access Logger
 
 A TypeScript Cloudflare Worker that logs incoming HTTP requests to R2, using Durable Objects as an efficient log buffer. Designed for performance monitoring, bot tracking, and access analytics across multiple domains.
@@ -27,13 +26,13 @@ A TypeScript Cloudflare Worker that logs incoming HTTP requests to R2, using Dur
 ---
 
 ## 📁 Project Structure
-
+```
 cloudflare-access-logger/
 ├── src/
 │   ├── index.ts         # Main Worker logic
 │   └── log-buffer.ts    # Durable Object class (log buffer + flush logic)
 └── wrangler.toml        # Worker + DO + R2 configuration
-
+```
 ---
 
 ## 🧪 How It Works
@@ -52,7 +51,7 @@ cloudflare-access-logger/
 1. Create your R2 bucket in the Cloudflare dashboard
 
 2. Install dependencies (if needed):
-   ```bash
+   ```
    npm install
    ```
 
@@ -60,7 +59,7 @@ cloudflare-access-logger/
 
 4. Deploy with Wrangler:
 
-   ```bash
+   ```
    npx wrangler publish
    ```
 
@@ -85,11 +84,3 @@ cloudflare-access-logger/
 ## 📄 License
 
 MIT © [GnicT](https://github.com/GnicT)
-
----
-
-## 🙋‍♀️ Questions or Ideas?
-
-Feel free to open an issue or fork the project. Contributions are welcome!
-
-```
